@@ -1,4 +1,4 @@
-import "./Skills.css";
+import "./skills.css";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaAws, FaGitAlt } from "react-icons/fa";
 import { SiMongodb, SiTypescript, SiExpress, SiSocketdotio, SiRedux, SiBootstrap, SiTailwindcss, SiMysql, SiPostman, SiWebstorm, SiJest } from "react-icons/si";
 
