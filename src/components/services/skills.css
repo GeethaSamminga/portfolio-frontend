@@ -43,3 +43,26 @@
   font-size: 14px;
   color: #ccc;
 }
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 20px;
+  }
+
+  .skills-section h2 {
+    font-size: 32px;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-card {
+    padding: 15px;
+  }
+
+  .skill-card p {
+    font-size: 12px;
+  }
+}
