@@ -25,7 +25,7 @@ const Contact = () => {
         setStatus({ type: '', message: '' });
 
         try {
-            const response = await fetch('hhttps://backend-portfolio-qdol.onrender.com/api/contact', {
+            const response = await fetch('http://localhost:5000/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
