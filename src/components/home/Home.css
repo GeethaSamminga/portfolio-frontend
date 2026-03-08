@@ -28,7 +28,16 @@ body{
   top: 0;
   left: 0;
   padding: 0 50px;
+  z-index: 1000;
 }
+
+.hamburger {
+  display: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
 .portfolio{
   list-style: none;
   margin: 0;
@@ -194,24 +203,42 @@ body{
 @media (max-width: 768px) {
   .navbar {
     padding: 0 20px;
-    height: auto;
-    flex-direction: column;
-    padding: 10px 20px;
+    height: 70px;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .nav-list {
-    gap: 15px;
-    font-size: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 70%;
+    height: calc(100vh - 70px);
+    background: #0d1b2a;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 25px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-list.active {
+    right: 0;
   }
 
   .nav-item a {
-    font-size: 14px;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    padding: 10px 0;
   }
 
   .portfolio .nav-item a {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .main {

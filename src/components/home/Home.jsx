@@ -1,21 +1,38 @@
+import { useState } from "react";
 import "./Home.css";
 import ProfileImg from "../../assets/resize-pic.jpg";
 import Resume from "../../assets/mern_resume (1).pdf";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Home = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
       <section id="home" className="home-section">
           <div className="navbar">
               <ul className="portfolio">
                   <li className="nav-item"><a href="#hero">Portfolio</a></li>
               </ul>
-              <ul className="nav-list">
-                  <li className="nav-item"><a href="#home">Home</a></li>
-                  <li className="nav-item"><a href="#about">About</a></li>
-                  <li className="nav-item"><a href="#skills">Skills</a></li>
-                  <li className="nav-item"><a href="#projects">Projects</a></li>
-                  <li className="nav-item"><a href="#experience">Experience</a></li>
-                  <li className="nav-item"><a href="#contact">Contact</a></li>
+              
+              <div className="hamburger" onClick={toggleMenu}>
+                  {isMenuOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
+              </div>
+
+              <ul className={`nav-list ${isMenuOpen ? "active" : ""}`}>
+                  <li className="nav-item"><a href="#home" onClick={closeMenu}>Home</a></li>
+                  <li className="nav-item"><a href="#about" onClick={closeMenu}>About</a></li>
+                  <li className="nav-item"><a href="#skills" onClick={closeMenu}>Skills</a></li>
+                  <li className="nav-item"><a href="#projects" onClick={closeMenu}>Projects</a></li>
+                  <li className="nav-item"><a href="#experience" onClick={closeMenu}>Experience</a></li>
+                  <li className="nav-item"><a href="#contact" onClick={closeMenu}>Contact</a></li>
               </ul>
           </div>
 
