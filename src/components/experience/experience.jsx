@@ -59,13 +59,22 @@ const Experience = () => {
         {
             id: 6,
             title: "Lead Follow-Ups System (Yogappify)",
-            company: "SurveyHeart LLP",
             description: "Engineered a scalable lead management system with advanced database optimization.",
             details: [
                 "Built RESTful APIs for lead tracking and follow-up management",
                 "Implemented partial indexes for improved query performance",
                 "Ensured data integrity with validation and constraints",
                 "Reduced database query time by 60% through optimization"
+            ],
+        },
+        {
+            id: 7,
+            title: "Node.js Backend Dependency Migration",
+            details: [
+                "Upgraded legacy backend dependencies across the Node.js application to their latest stable versions.",
+                "Refactored large parts of the codebase from callback-based asynchronous logic to modern async/await patterns to ensure compatibility with newer versions of Mongoose.",
+                "Resolved breaking changes and compatibility issues across multiple backend services including form and quiz modules.",
+                "Improved application maintainability, stability, and compatibility with the modern Node.js ecosystem"
             ],
         }
     ];
